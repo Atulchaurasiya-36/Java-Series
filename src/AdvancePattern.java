@@ -1,27 +1,81 @@
-public class AlphabetPattern {
+public class AdvancePattern {
 
-    //   Inverted V Star Pattern.
+    // Pant's style Star Pattern.
 
-    public static void vShape(){
-        int k=1;
-        for(int i=1;i<=4;i++){
-            k=1;
-            for(int j=1;j<=7;j++){
-                if(j>=5-i && j<=3+i && k==1){
+    public static void pantsStyle(){
+        for(int i=1;i<=5;i++){
+            for(int j=1;j<=9;j++){
+                if(j<=6-i || j>=4+i){
                     System.out.print("*");
-                    k=0;
                 }
                 else{
                     System.out.print(" ");
-                    if(j==(3+i)-1)k=1;
+                }
+            }
+            System.out.println();
+        }
+
+    }
+
+
+
+
+
+    // Inverted Pant's Shape Star Pattern.
+
+    public static void invertedPantsStyle(){
+        for(int i=1;i<=5;i++){
+            for(int j=1;j<=9;j++){
+                if(j<=i || j>=10-i){
+                    System.out.print("*");
+                }
+                else{
+                    System.out.print(" ");
                 }
             }
             System.out.println();
         }
     }
-    
+
+
+
+
+
+    //butterfly shape star pattern.
+
+   public static void butterflyShape(){
+       for(int i=1;i<=5;i++){
+           for(int j=1;j<=9;j++){
+               if(j<=i || j>=10-i){
+                   System.out.print("*");
+               }
+               else{
+                   System.out.print(" ");
+               }
+           }
+           System.out.println();
+       }
+//    +++++++++++++++++++++ inverted++++++++++++
+
+       for(int i=1;i<=4;i++){
+           for(int j=1;j<=9;j++){
+               if(j<=5-i || j>=5+i){
+                   System.out.print("*");
+               }
+               else{
+                   System.out.print(" ");
+               }
+           }
+           System.out.println();
+       }
+
+
+   }
+
     public static void main(String[] args) {
-        vShape();
+//        pantsStyle();
+//        invertedPantsStyle();
+        butterflyShape();
 
     }
 }
